@@ -1,5 +1,5 @@
 #!/bin/bash
 
-BLD="./build"
+BLD="build"
 
 ./"$BLD"/writer | ./"$BLD"/reader
