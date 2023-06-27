@@ -35,9 +35,7 @@ int main() {
 
     std::cout << shmAddress << "\n";
     
-    if (shmdt(shmAddress) == -1) {
-        printError("[reader.cpp:shmdt] ");
-    }
+    shmdt(shmAddress);
     deleteSegment(shmId);
     return 0;
 }

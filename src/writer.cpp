@@ -37,10 +37,7 @@ int main() {
     std::string s = "Hello World!";
     std::strncpy(shmAddress, s.c_str(), s.size());
 
-    if (shmdt(shmAddress) == -1) {
-        printError("[writer.cpp:shmdt] ");
-    }
-
+    shmdt(shmAddress);
     std::cout << SHM_KEY << "\n";
     return 0;
 }
